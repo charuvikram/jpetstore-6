@@ -11,6 +11,7 @@ pipeline {
     stage('UnitTest') {
       steps {
         sh './mvnw test'
+        junit '**/target/surefire-reports'
       }
     }
 
